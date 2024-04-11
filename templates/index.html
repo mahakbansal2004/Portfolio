@@ -1,0 +1,1406 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Mahak Bansal</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- Custom CSS -->
+    <style>
+        /* Custom CSS */
+
+/* Home Section */
+
+
+.masthead {
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+
+
+video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+/* About Me Section */
+#about-me {
+    background-color: #f8f9fa;
+    padding: 100px 0;
+}
+
+#about-me h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 40px;
+    color: #343a40;
+}
+
+#about-me p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+.about-text {
+    transition: color 0.4s, transform 0.4s;
+}
+
+.about-text:hover {
+    color: #ffc107; /* Change text color on hover */
+    transform: scale(1.05); /* Add scale effect on hover */
+}
+
+/* Profile Image Styling */
+.profile-img {
+    width: 200px; /* Adjust the size of the profile image */
+    height: 350px; /* Keep the height consistent for a circular appearance */
+    border-radius: 50%; /* Make it a circle */
+    object-fit: cover; /* Ensure the image covers the entire container */
+    transition: transform 0.4s, box-shadow 0.4s, filter 0.4s; /* Smooth transition for zoom, elevation, and filter */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Add a subtle shadow */
+}
+
+/* Add a hover effect */
+.profile-img:hover {
+    transform: scale(1.05); /* Zoom in slightly on hover */
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3); /* Increase elevation and shadow on hover */
+    filter: brightness(80%); /* Apply a brightness effect for a color overlay */
+}
+
+
+
+
+
+/* Skills Section */
+#skills {
+    background-color: #f8f9fa;
+    padding: 50px 0;
+}
+
+#skills h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 40px;
+    color: #343a40;
+}
+
+
+
+.skill-icon {
+    font-size: 4rem;
+    color: #007bff;
+    margin-bottom: 20px;
+}
+
+/* Portfolio Section */
+#portfolio {
+    background-color: #f8f9fa;
+    padding: 100px 0;
+}
+
+#portfolio h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 40px;
+    color: #343a40;
+}
+
+.portfolio-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.portfolio-item img:hover {
+    transform: scale(1.05);
+}
+
+/* Contact Form Styling */
+.contact-form {
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 40px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form form input[type="text"],
+.contact-form form input[type="email"],
+.contact-form form textarea {
+    border-radius: 10px;
+    margin-bottom: 30px;
+    padding: 20px;
+    font-size: 18px;
+}
+
+.contact-form form textarea {
+    resize: none;
+}
+
+.contact-form form button {
+    border-radius: 10px;
+    padding: 20px;
+    font-size: 18px;
+}
+
+.contact-form form button:hover {
+    background-color: #007bff;
+}
+
+/* Footer */
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #343a40;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer p {
+    margin-bottom: 0;
+}
+
+.equal-height-card {
+    height: 100%;
+}
+
+.tool-tip:hover {
+    transform: translateY(-5px);
+    transition: all 0.3s ease-in-out;
+    background-color: #fff;
+    border-radius: 12px;
+}
+
+/* Custom CSS for Experience Section */
+.experience-card {
+    background-color: #fff;
+    border: 1px solid #ddd; /* Add border to the cards */
+}
+
+.experience-card .card-body {
+    padding: 20px; /* Add padding inside the card body */
+}
+
+.experience-card .card-title {
+    color: #333;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.experience-card .card-text {
+    color: #666;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.experience-card:hover {
+    transform: translateY(-5px); /* Add a slight hover effect */
+    transition: transform 0.3s ease;
+}
+
+#links{
+    background-color: #f8f9fa;
+}
+
+#backToTopBtn {
+    display: none;
+    position: fixed;
+    bottom: 60px;
+    right: 40px;
+    z-index: 99;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    padding: 15px 20px;
+    border-radius: 6px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  #backToTopBtn:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+  
+  #backToTopBtn i {
+    margin-right: 5px;
+  }
+  
+  #backToTopBtn span {
+    display: inline-block;
+    transition: transform 0.3s ease;
+  }
+  
+  #backToTopBtn:hover span {
+    transform: translateX(5px);
+  }
+  
+  
+</style>
+
+</head>
+
+<body id="top">
+    
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Mahak Bansal</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About Me</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#education">Education</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#experience">Experience</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#certificates">Certificates</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#links">Links</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#cv">CV</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact Me</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <header class="masthead" id="top">
+        <video autoplay muted loop id="bgVideo">
+            <source src="static/3.mp4" type="video/mp4">
+            Your browser does not support HTML5 video.
+        </video>
+        <div class="container h-100">
+            <div class="row h-100 align-items-center justify-content-center text-center">
+                <div class="col-lg-10 align-self-end">
+                    <h1 class="text-uppercase text-white font-weight-bold">Welcome to My Portfolio</h1>
+                    <hr class="divider my-4">
+                </div>
+                <div class="col-lg-8 align-self-baseline">
+                    <p class="text-white font-weight-light mb-5">I am Mahak Bansal, a passionate developer.</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    
+<div id="about">
+    <section id="about-me">
+        
+        <div class="container">
+            <h2 class="text-center mb-5">About Me</h2>
+            <div class="row align-items-center">
+                <!-- About Text -->
+                <div class="col-md-6">
+                    <p class="about-text">I am a BSc (Hons) CS student in my final year, with a specialization in full-stack development. I possess strong problem-solving skills in Data
+                        Structures and Algorithms. My verbal and written communication skills are proficient, and I am always ready to contribute to dynamic team
+                        settings. I have experience in tackling diverse challenges and am eager to drive impactful tech solutions.
+                        </p>
+                </div>
+                <!-- Picture -->
+                <div class="col-md-6 text-center">
+                    <img src="static/untitled.jpeg"  class="profile-img" style="width: 70%;" i>
+                </div>
+            </div>
+            <!-- Cards -->
+            <div class="row mt-5">
+                <div class="col-md-12">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="card border-primary equal-height-card animated fadeInUp">
+                                <div class="card-body">
+                                    <h5 class="card-title"><i class="fas fa-thumbs-up"></i> Strengths</h5>
+                                    <p class="card-text">I am proficient in HTML, CSS, and JavaScript. I have strong problem-solving skills and enjoy collaborating with team members.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card border-danger equal-height-card animated fadeInUp">
+                                <div class="card-body">
+                                    <h5 class="card-title"><i class="fas fa-thumbs-down"></i> Weaknesses</h5>
+                                    <p class="card-text">I sometimes struggle with time management but I am actively working on improving this aspect.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card border-success equal-height-card animated fadeInUp">
+                                <div class="card-body">
+                                    <h5 class="card-title"><i class="fas fa-lightbulb"></i> What Motivates Me</h5>
+                                    <p class="card-text">I am motivated by challenging projects that allow me to learn and grow as a developer. I am driven by the opportunity to create meaningful solutions.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card border-warning equal-height-card animated fadeInUp">
+                                <div class="card-body">
+                                    <h5 class="card-title"><i class="fas fa-heart"></i> Desire to Work</h5>
+                                    <p class="card-text">I desire to work in an innovative environment where I can contribute my skills towards building impactful web applications that make a difference.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+   
+    <!-- Skills Section -->
+<div id="skills">
+    <section class="bg-light py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">My Skills</h2>
+
+            <!-- Frontend Skills -->
+            <h3 class="text-center mb-4">Frontend</h3>
+            <div class="row justify-content-center">
+                <div class="col-md-3 text-center mb-4">
+                    <div class="card border-0 rounded tool-tip shadow p-4">
+                        <i class="fab fa-html5 skill-icon fa-3x"></i>
+                        <h3 class="mt-3">HTML</h3>
+                    </div>
+                </div>
+                <div class="col-md-3 text-center mb-4">
+                    <div class="card border-0 rounded tool-tip shadow p-4">
+                        <i class="fab fa-css3-alt skill-icon fa-3x"></i>
+                        <h3 class="mt-3">CSS</h3>
+                    </div>
+                </div>
+                <div class="col-md-3 text-center mb-4">
+                    <div class="card border-0 rounded tool-tip shadow p-4">
+                        <i class="fab fa-js skill-icon fa-3x"></i>
+                        <h3 class="mt-3">JavaScript</h3>
+                    </div>
+                </div>
+                <div class="col-md-3 text-center mb-4">
+                    <div class="card border-0 rounded tool-tip shadow p-4">
+                        <i class="fab fa-bootstrap skill-icon fa-3x"></i>
+                        <h3 class="mt-3">Bootstrap</h3>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Backend Skills -->
+            <h3 class="text-center mb-4 mt-5">Backend</h3>
+            <div class="row justify-content-center">
+                <div class="col-md-3 text-center mb-4">
+                    <div class="card border-0 rounded tool-tip shadow p-4">
+                        <i class="fas fa-database skill-icon fa-3x"></i>
+                        <h3 class="mt-3">SQL</h3>
+                    </div>
+                </div>
+                <div class="col-md-3 text-center mb-4">
+                    <div class="card border-0 rounded tool-tip shadow p-4">
+                        <i class="fab fa-python skill-icon fa-3x"></i>
+                        <h3 class="mt-3">Django</h3>
+                    </div>
+                </div>
+                <div class="col-md-3 text-center mb-4">
+                    <div class="card border-0 rounded tool-tip shadow p-4">
+                        <i class="fab fa-python skill-icon fa-3x"></i>
+                        <h3 class="mt-3">Flask</h3>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Programming Languages Skills -->
+            <h3 class="text-center mb-4 mt-5">Programming Languages</h3>
+            <div class="row justify-content-center">
+                <div class="col-md-3 text-center mb-4">
+                    <div class="card border-0 rounded tool-tip shadow p-4">
+                        <i class="fas fa-code skill-icon fa-3x"></i>
+                        <h3 class="mt-3">C++</h3>
+                    </div>
+                </div>
+                <div class="col-md-3 text-center mb-4">
+                    <div class="card border-0 rounded tool-tip shadow p-4">
+                        <i class="fab fa-python skill-icon fa-3x"></i>
+                        <h3 class="mt-3">Python</h3>
+                    </div>
+                </div>
+                <div class="col-md-3 text-center mb-4">
+                    <div class="card border-0 rounded tool-tip shadow p-4">
+                        <i class="fab fa-java skill-icon fa-3x"></i>
+                        <h3 class="mt-3">Java</h3>
+                    </div>
+                </div>
+                <div class="col-md-3 text-center mb-4">
+                    <div class="card border-0 rounded tool-tip shadow p-4">
+                        <i class="fab fa-android skill-icon fa-3x"></i>
+                        <h3 class="mt-3">Android</h3>
+                    </div>
+                </div>
+                <div class="col-md-3 text-center mb-4">
+                    <div class="card border-0 rounded tool-tip shadow p-4">
+                        <i class="fas fa-code skill-icon fa-3x"></i>
+                        <h3 class="mt-3">Prolog</h3>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Other Skills -->
+            <h3 class="text-center mb-4 mt-5">Additional Skills</h3>
+            
+<div class="row justify-content-center">
+    <div class="col-md-3 text-center mb-4">
+        <div class="card border-0 rounded tool-tip shadow p-4">
+            <i class="fab fa-git skill-icon fa-3x"></i>
+            <h3 class="mt-3">Git</h3>
+        </div>
+    </div>
+    <div class="col-md-3 text-center mb-4">
+        <div class="card border-0 rounded tool-tip shadow p-4">
+            <i class="fas fa-cloud skill-icon fa-3x"></i>
+            <h3 class="mt-3">Cloud Computing</h3>
+        </div>
+    </div>
+    <div class="col-md-3 text-center mb-4">
+        <div class="card border-0 rounded tool-tip shadow p-4">
+            <i class="fas fa-paint-brush skill-icon fa-3x"></i>
+            <h3 class="mt-3">Digital Graphics</h3>
+        </div>
+    </div>
+    <div class="col-md-3 text-center mb-4">
+        <div class="card border-0 rounded tool-tip shadow p-4">
+            <i class="fas fa-robot skill-icon fa-3x"></i>
+            <h3 class="mt-3">Artificial Intelligence</h3>
+        </div>
+    </div>
+    <div class="col-md-3 text-center mb-4">
+        <div class="card border-0 rounded tool-tip shadow p-4">
+            <i class="fas fa-database skill-icon fa-3x"></i>
+            <h3 class="mt-3">Data Mining</h3>
+        </div>
+    </div>
+    <div class="col-md-3 text-center mb-4">
+        <div class="card border-0 rounded tool-tip shadow p-4">
+            <i class="fas fa-robot skill-icon fa-3x"></i>
+            <h3 class="mt-3">Machine Learning</h3>
+        </div>
+    </div>
+    <div class="col-md-3 text-center mb-4">
+        <div class="card border-0 rounded tool-tip shadow p-4">
+            <i class="fas fa-code-branch skill-icon fa-3x"></i>
+            <h3 class="mt-3">Data Structures</h3>
+        </div>
+    </div>
+    <div class="col-md-3 text-center mb-4">
+        <div class="card border-0 rounded tool-tip shadow p-4">
+            <i class="fas fa-chart-line skill-icon fa-3x"></i>
+            <h3 class="mt-3">Data Analysis and Algorithm</h3>
+        </div>
+    </div>
+</div>
+
+<div class="col-md-3 text-center mb-4">
+    <div class="card border-0 rounded tool-tip shadow p-4">
+        <i class="fab fa-github skill-icon fa-3x"></i>
+        <h3 class="mt-3">GitHub</h3>
+    </div>
+
+        </div>
+    </section>
+</div>
+
+
+
+
+
+<!-- Additional Skills Section -->
+<section id="additional-skills" class="bg-light py-5">
+    <div class="container">
+        <h2 class="text-center mb-5">Additional Skills</h2>
+        <div class="row justify-content-center">
+            <div class="col-md-3 text-center mb-4">
+                <div class="card border-0 rounded tool-tip shadow p-4" style="height: 100%;">
+                    <i class="fas fa-clock skill-icon fa-3x"></i>
+                    <h3 class="mt-3">Time Management</h3>
+                </div>
+            </div>
+            <div class="col-md-3 text-center mb-4">
+                <div class="card border-0 rounded tool-tip shadow p-4" style="height: 100%;">
+                    <i class="fas fa-microphone skill-icon fa-3x"></i>
+                    <h3 class="mt-3">Public Speaking</h3>
+                </div>
+            </div>
+            <div class="col-md-3 text-center mb-4">
+                <div class="card border-0 rounded tool-tip shadow p-4" style="height: 100%;">
+                    <i class="fas fa-users skill-icon fa-3x"></i>
+                    <h3 class="mt-3">Team Leadership</h3>
+                </div>
+            </div>
+            <div class="col-md-3 text-center mb-4">
+                <div class="card border-0 rounded tool-tip shadow p-4" style="height: 100%;">
+                    <i class="fas fa-tasks skill-icon fa-3x"></i>
+                    <h3 class="mt-3">Project Management</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Education Section -->
+<div id="education">
+
+<section class="bg-light py-5">
+    <div class="container">
+        <h2 class="text-center mb-5" ><p> </p>Education</h2>
+
+        <!-- Education Cards -->
+        <div class="row">
+            <!-- Delhi University -->
+            <div class="col-md-8 offset-md-2 mb-4">
+                <div class="card border-0 rounded shadow">
+                    <div class="card-body">
+                        <h3 class="card-title text-primary">Delhi University (Kalindi College)</h3>
+                        <p class="card-text">BSc (Hons) Computer Science</p>
+                        <p class="card-text">2021 - Present</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hardayal Public School -->
+            <div class="col-md-8 offset-md-2 mb-4">
+                <div class="card border-0 rounded shadow">
+                    <div class="card-body">
+                        <h3 class="card-title text-primary">Hardayal Public School</h3>
+                        <p class="card-text">XII (Non-Medical)</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Shri Rama Bhati Public School -->
+            <div class="col-md-8 offset-md-2 mb-4">
+                <div class="card border-0 rounded shadow">
+                    <div class="card-body">
+                        <h3 class="card-title text-primary">Shri Rama Bhati Public School</h3>
+                        <p class="card-text">X</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+</div>
+
+
+    <!-- Experience section -->
+    <div id="experience" >
+<section class="bg-light py-5">
+    <div class="container">
+        <h2 class="text-center mb-5" style="margin-top: 20px;">Experience</h2>
+
+        <!-- Experience Cards -->
+        <!-- Sattva Society -->
+        <div class="row">
+            <div class="col-md-8 offset-md-2 mb-4">
+                <div class="card border-0 rounded shadow">
+                    <div class="card-body">
+                        <h3 class="card-title text-primary">Sattva Society (CS) Kalindi College</h3>
+                        <p class="card-text">Discipline Head | 09/2023 - Present</p>
+                        <p class="card-text">As the CS Society Discipline Head, excelled in managing feedback and driving continuous improvement by leveraging member input for effective decision-making. Proficient in creating detailed project plans, fostering efficient execution and collaboration.</p>
+                        <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#disciplineModal" onclick="return false;">View Certificate</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Aashman Foundation -->
+        <div class="row">
+            <div class="col-md-8 offset-md-2 mb-4">
+                <div class="card border-0 rounded shadow">
+                    <div class="card-body">
+                        <h3 class="card-title text-primary">Aashman Foundation</h3>
+                        <p class="card-text">Graphic Designer | 07/2023 - 10/2023</p>
+                        <p class="card-text">As Manager of Graphic Designing, led the team in creating visually engaging content aligned with goals. Oversaw design process, ensured brand consistency, collaborated with teams, and enhanced brand identity.</p>
+                        <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#aashmanModal">View Certificate</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Swell - Network Manager -->
+        <div class="row">
+            <div class="col-md-8 offset-md-2 mb-4">
+                <div class="card border-0 rounded shadow">
+                    <div class="card-body">
+                        <h3 class="card-title text-primary">Swell</h3>
+                        <p class="card-text">Network Manager | 06/2022 - 10/2022</p>
+                        <p class="card-text">As Network Manager, led design, implementation, and maintenance of robust network infrastructure. Managed team, ensured security, and optimized performance. Proactively recommended innovative solutions to support company objectives.</p>
+                        <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#networkModal">View Certificate</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Swell - Campus Ambassador -->
+        <div class="row">
+            <div class="col-md-8 offset-md-2 mb-4">
+                <div class="card border-0 rounded shadow">
+                    <div class="card-body">
+                        <h3 class="card-title text-primary">Swell</h3>
+                        <p class="card-text">Campus Ambassador | 03/2022 - 06/2022</p>
+                        <p class="card-text">Represented the platform's mission, organizing events to enhance speaking skills and foster open discussions. Promoted engagement and facilitated the exchange of diverse perspectives within the community.</p>
+                        <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#ambassadorModal">View Certificate</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+</div>
+
+<!-- Modals for Certificates -->
+<div class="modal fade" id="disciplineModal" tabindex="-1" role="dialog" aria-labelledby="disciplineModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="disciplineModalLabel">Discipline Head Certificate</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>Certificate coming soon</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="aashmanModal" tabindex="-1" role="dialog" aria-labelledby="aashmanModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="aashmanModalLabel">Aashman Foundation Certificate</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <img src="static/aashmanfoundation.jpg" class="img-fluid" alt="Certificate" style="max-height: 400px; max-width: 100%;">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="networkModal" tabindex="-1" role="dialog" aria-labelledby="networkModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="networkModalLabel">Swell Network Manager Certificate</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <img src="static/swellca.png" class="img-fluid" alt="Certificate" style="max-height: 400px; max-width: 100%;">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="ambassadorModal" tabindex="-1" role="dialog" aria-labelledby="ambassadorModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="ambassadorModalLabel">Swell Campus Ambassador Certificate</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <img src="static/swellca.png" class="img-fluid" alt="Certificate" style="max-height: 400px; max-width: 100%;">
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <!-- Courses & Certificates Section -->
+    <div id="certificates">
+<section class="bg-light py-5">
+    <div class="container">
+        <h2 class="text-center mb-5" style="margin-top: 20px;">Courses & Certificates</h2>
+
+        <!-- Sushma Gupta Scholarship -->
+        <div class="row mb-4">
+            <div class="col-md-8 offset-md-2">
+                <div class="card border-0 rounded shadow-sm">
+                    <div class="card-body">
+                        <h3 class="card-title">Sushma Gupta Scholarship</h3>
+                        <p class="card-text">Awarded for being the second best all-round student of the college during the third year.</p>
+                        <a href="#" class="btn btn-primary btn-block" data-toggle="modal" data-target="#sushmaModal">View Certificate</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Google Cloud Study Jam -->
+        <div class="row mb-4">
+            <div class="col-md-8 offset-md-2">
+                <div class="card border-0 rounded shadow-sm">
+                    <div class="card-body">
+                        <h3 class="card-title">Google Cloud Study Jam</h3>
+                        <p class="card-text">Gained hands-on experience with Google Cloud technologies.</p>
+                        <a href="#" class="btn btn-primary btn-block" data-toggle="modal" data-target="#googleCloudModal">View Certificate</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Google Cloud Arcade -->
+        <div class="row mb-4">
+            <div class="col-md-8 offset-md-2">
+                <div class="card border-0 rounded shadow-sm">
+                    <div class="card-body">
+                        <h3 class="card-title">Google Cloud Arcade</h3>
+                        <p class="card-text">Finished the Google Cloud Arcade program and earned multiple skill badges in cloud computing, data analysis, and machine learning.</p>
+                        <a href="#" class="btn btn-primary btn-block" data-toggle="modal" data-target="#googleCloudArcadeModal">View Certificate</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+</div>
+
+<!-- Modals for Certificates -->
+<div class="modal fade" id="sushmaModal" tabindex="-1" role="dialog" aria-labelledby="sushmaModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="sushmaModalLabel">Sushma Gupta Scholarship Certificate</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <!-- Insert image or certificate content here -->
+                <img src="static/PXL_20240408_131308820.jpg" class="img-fluid" alt="Certificate" style="max-height: 400px; max-width: 100%;">
+                <!-- <p>Placeholder for certificate image or content</p> -->
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="googleCloudModal" tabindex="-1" role="dialog" aria-labelledby="googleCloudModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="googleCloudModalLabel">Google Cloud Study Jam Certificate</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <!-- Insert image or certificate content here -->
+                <a href="https://www.cloudskillsboost.google/public_profiles/5f53d4ba-2962-459e-9447-a3a4af1b372d" target="_blank">click here</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="googleCloudArcadeModal" tabindex="-1" role="dialog" aria-labelledby="googleCloudArcadeModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="googleCloudArcadeModalLabel">Google Cloud Arcade Certificate</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <a href="https://www.cloudskillsboost.google/public_profiles/3bbf3214-2955-4c83-b6af-e1468874c1ca" target="_blank">click here</a>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- Additional Certificates Section -->
+<section id="additional-certificates" class="bg-light py-5">
+    <style>
+        /* CSS to set fixed height for card bodies */
+        .card {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+        
+        .card-body {
+            flex-grow: 1;
+        }
+        
+        .card-footer {
+            margin-top: auto;
+        }
+    </style>
+
+    <div class="container">
+        <h2 class="text-center mb-5">Additional Certificates</h2>
+
+        <!-- Certificate Cards -->
+        <div class="row">
+            <!-- Certificate 1 -->
+            <div class="col-md-4 mb-4">
+                <div class="card border-0 rounded shadow">
+                    <div class="card-body">
+                        <h3 class="card-title">Android App using Kotlin</h3>
+                        <p class="card-text">This Certificate is Proudly presented to Mahak Bansal for successfully building an Android App using Kotlin during Android Study Jams December 2021 organized by GDSC Kalindi College, University of Delhi.</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#certificateModal1" onclick="return false;">View Certificate</a>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Certificate 2 -->
+            <div class="col-md-4 mb-4">
+                <div class="card border-0 rounded shadow">
+                    <div class="card-body">
+                        <h3 class="card-title">AROGYA: THE FITNESS CLUB</h3>
+                        <p class="card-text">AZADI KA AMRIT MAHOTSAV Certificate of Appreciation</p>
+                        <p class="card-text">This is to certify that Mahak Bansal of BSc Computer Science, 1st Year has participated in the Intra-College Aerobics Competition held on 2nd February, 2022.</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#certificateModal2" onclick="return false;">View Certificate</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Certificate 3 -->
+            <div class="col-md-4 mb-4">
+                <div class="card border-0 rounded shadow">
+                    <div class="card-body">
+                        <h3 class="card-title">NATIONAL WORKSHOP</h3>
+                        <p class="card-text">Certificate of Participation</p>
+                        <p class="card-text">This is to certify that Mahak Bansal from Kalindi College has participated in the National Workshop on “Story Lines in Music and Poetry” organized by Sagacious Scribblers - The English Creative Writing Club, Kalindi College, University of Delhi on 28th January, 2022.</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#certificateModal3" onclick="return false;">View Certificate</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Certificate 4 -->
+            <div class="col-md-4 mb-4">
+                <div class="card border-0 rounded shadow">
+                    <div class="card-body">
+                        <h3 class="card-title">World Education Day Fair 2022</h3>
+                        <p class="card-text">Certificate of Participation</p>
+                        <p class="card-text">Mahak Bansal from Kalindi College has successfully participated in India's largest online learning event - 'World Education Day Fair 2022' organized by Internshala Trainings.</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#certificateModal4" onclick="return false;">View Certificate</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Certificate 5 -->
+            <div class="col-md-4 mb-4">
+                <div class="card border-0 rounded shadow">
+                    <div class="card-body">
+                        <h3 class="card-title">Certificate of Completion</h3>
+                        <p class="card-text">Presented to Mahak Bansal for successfully completing a free online course on MySQL Basics provided by Great Learning Academy.</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#certificateModal5" onclick="return false;">View Certificate</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Certificate 6 -->
+            <div class="col-md-4 mb-4">
+                <div class="card border-0 rounded shadow">
+                    <div class="card-body">
+                        <h3 class="card-title">BYTEBASH: Competitive Coding Competition</h3>
+                        <p class="card-text">CERTIFICATE OF PARTICIPATION</p>
+                        <p class="card-text">This is to certify that Mahak Bansal from BSc Computer Science, 1st year, Kalindi College has qualified for the Final Round of BYTEBASH, a competitive coding competition at Qubit'23, the inter-college tech fest held at Kalindi College, Delhi University on April 12-13, 2022.</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#certificateModal6" onclick="return false;">View Certificate</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Certificate 7 -->
+            <div class="col-md-4 mb-4">
+                <div class="card border-0 rounded shadow">
+                    <div class="card-body">
+                        <h3 class="card-title">VEDANTA</h3>
+                        <p class="card-text">CERTIFICATE OF APPRECIATION</p>
+                        <p class="card-text">Thank You, Mahak Bansal for running 1-43 Km and your contribution towards Mirchi and Vedanta's initiative of #RunForZeroHunger.</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#certificateModal7" onclick="return false;">View Certificate</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Certificate 8 -->
+            <div class="col-md-4 mb-4">
+                <div class="card border-0 rounded shadow">
+                    <div class="card-body">
+                        <h3 class="card-title">Financial Planning Workshop</h3>
+                        <p class="card-text">CERTIFICATE OF PARTICIPATION</p>
+                        <p class="card-text">We hereby provide this certificate to Mahak Bansal for attending the workshop "Financial Planning," conducted by ProSkill Development Pvt. Ltd. in association with Kalindi College.</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#certificateModal8" onclick="return false;">View Certificate</a>
+                    </div>
+                </div>
+            </div>
+
+            
+        </div>
+
+
+    </div>
+</section>
+
+<!-- modals for certificates-->
+<!-- Certificate 1 Modal -->
+<div class="modal fade" id="certificateModal1" tabindex="-1" role="dialog" aria-labelledby="certificateModalLabel1" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="certificateModalLabel1">CERTIFICATE OF COMPLETION</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <!-- Insert certificate image or content here -->
+                <img src="static/androidgdsc.PNG" class="img-fluid" alt="Certificate" style="max-height: 400px; max-width: 100%;">
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Certificate 2 Modal -->
+<div class="modal fade" id="certificateModal2" tabindex="-1" role="dialog" aria-labelledby="certificateModalLabel2" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="certificateModalLabel2">CERTIFICATE OF COMPLETION</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <!-- Insert certificate image or content here -->
+                <img src="static/arogya.PNG" class="img-fluid" alt="Certificate" style="max-height: 400px; max-width: 100%;">
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Certificate 3 Modal -->
+<div class="modal fade" id="certificateModal3" tabindex="-1" role="dialog" aria-labelledby="certificateModalLabel1" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="certificateModalLabel1">CERTIFICATE OF COMPLETION</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <!-- Insert certificate image or content here -->
+                <img src="static/poetry.PNG" class="img-fluid" alt="Certificate" style="max-height: 400px; max-width: 100%;">
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Certificate 4 Modal -->
+<div class="modal fade" id="certificateModal4" tabindex="-1" role="dialog" aria-labelledby="certificateModalLabel2" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="certificateModalLabel2">CERTIFICATE OF COMPLETION</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <!-- Insert certificate image or content here -->
+                <img src="static/wedf.PNG" class="img-fluid" alt="Certificate" style="max-height: 400px; max-width: 100%;">
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Certificate 5 Modal -->
+<div class="modal fade" id="certificateModal5" tabindex="-1" role="dialog" aria-labelledby="certificateModalLabel1" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="certificateModalLabel1">CERTIFICATE OF COMPLETION</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <!-- Insert certificate image or content here -->
+                <img src="static/sql.PNG" class="img-fluid" alt="Certificate" style="max-height: 400px; max-width: 100%;">
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Certificate 6 Modal -->
+<div class="modal fade" id="certificateModal6" tabindex="-1" role="dialog" aria-labelledby="certificateModalLabel2" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="certificateModalLabel2">CERTIFICATE OF COMPLETION</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <!-- Insert certificate image or content here -->
+                <img src="static/qubit.PNG" class="img-fluid" alt="Certificate" style="max-height: 400px; max-width: 100%;">
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Certificate 7 Modal -->
+<div class="modal fade" id="certificateModal7" tabindex="-1" role="dialog" aria-labelledby="certificateModalLabel1" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="certificateModalLabel1">CERTIFICATE OF COMPLETION</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <!-- Insert certificate image or content here -->
+                <img src="static/vedanta.PNG" class="img-fluid" alt="Certificate" style="max-height: 400px; max-width: 100%;">
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Certificate 8 Modal -->
+<div class="modal fade" id="certificateModal8" tabindex="-1" role="dialog" aria-labelledby="certificateModalLabel2" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="certificateModalLabel2">CERTIFICATE OF COMPLETION</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <!-- Insert certificate image or content here -->
+                <img src="static/proschool.PNG" class="img-fluid" alt="Certificate" style="max-height: 400px; max-width: 100%;">
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!-- project section-->
+    <div id="projects">
+<section class="bg-light py-5">
+    <div class="container">
+        <h2 class="text-center mb-5" style="margin-top: 20px;">Projects</h2>
+
+        <!-- Project 1 -->
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card border-0 rounded shadow mb-4">
+                    <div class="card-body">
+                        <h3 class="card-title">Scooter Website Development</h3>
+                        <p class="card-text">Developed a dynamic website using HTML, CSS, Bootstrap, Django, JavaScript, and SQL. This facilitates scooter rentals with features including user authentication, scooter listings, booking capabilities, and robust database management.</p>
+                        <a href="https://github.com/mahakbansal2004/Scooter-Website-Development" class="btn btn-primary btn-sm" target="_blank">View Code on GitHub</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Project 2 -->
+            <div class="col-md-6">
+                <div class="card border-0 rounded shadow mb-4">
+                    <div class="card-body">
+                        <h3 class="card-title">Image Editing Website</h3>
+                        <p class="card-text">Created an image editing website with Flask, HTML, CSS, Bootstrap, JavaScript, and SQL. Users can upload, edit, and save images online with features like filters, cropping, and resizing. The integration of SQL ensures efficient image storage and retrieval.</p>
+                        <a href="https://github.com/mahakbansal2004/Image-Editing-Website" class="btn btn-primary btn-sm" target="_blank">View Code on GitHub</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Project 3 -->
+            <div class="col-md-6 offset-md-3 my-4">
+                <div class="card border-0 rounded shadow">
+                    <div class="card-body d-flex flex-column justify-content-center align-items-center">
+                        <h3 class="card-title">Graphics Design</h3>
+                        <p class="card-text">Showcasing graphics created so far.</p><br><br>
+                        <a href="https://drive.google.com/drive/folders/19m-hq3sivhfAHOB7GBdMZdp5bL8Wgcvi?usp=sharing" class="btn btn-primary btn-sm" target="_blank">View Graphics on Google Drive</a>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</section>
+</div>
+
+    <!-- links Section -->
+    <div  id="links">
+<section class="py-5">
+    <div class="container">
+        <h2 class="text-center mb-4" style="margin-top: 20px;">Important Links</h2>
+
+        <div class="row row-cols-1 row-cols-md-4 g-4">
+            <!-- Gmail -->
+            <div class="col">
+                <a href="mailto:mhkbnsl2004@gmail.com@gmail.com" class="text-decoration-none text-center d-block py-4 border rounded" target="_blank">
+                    <i class="fas fa-envelope fa-4x mb-2"></i>
+                    <span class="d-block fs-5">Gmail</span>
+                </a>
+            </div>
+
+            <!-- LinkedIn -->
+            <div class="col">
+                <a href="https://www.linkedin.com/in/mahak-bansal-2004-" class="text-decoration-none text-center d-block py-4 border rounded" target="_blank">
+                    <i class="fab fa-linkedin fa-4x mb-2"></i>
+                    <span class="d-block fs-5">LinkedIn</span>
+                </a>
+            </div>
+
+            <!-- Twitter -->
+            <div class="col">
+                <a href="https://twitter.com/54_mahak" class="text-decoration-none text-center d-block py-4 border rounded" target="_blank">
+                    <i class="fab fa-twitter fa-4x mb-2"></i>
+                    <span class="d-block fs-5">Twitter</span>
+                </a>
+            </div>
+
+            <!-- Instagram -->
+            <div class="col">
+                <a href="https://www.instagram.com/mahakbansal2004" class="text-decoration-none text-center d-block py-4 border rounded" target="_blank">
+                    <i class="fab fa-instagram fa-4x mb-2"></i>
+                    <span class="d-block fs-5">Instagram</span>
+                </a>
+            </div>
+
+            <!-- Google Cloud -->
+            <div class="col">
+                <a href="https://www.cloudskillsboost.google/public_profiles/3bbf3214-2955-4c83-b6af-e1468874c1ca" class="text-decoration-none text-center d-block py-4 border rounded" target="_blank">
+                    <i class="fab fa-google fa-4x mb-2"></i>
+                    <span class="d-block fs-5">Google Cloud</span>
+                </a>
+            </div>
+
+            <!-- Credly -->
+            <div class="col">
+                <a href="https://www.credly.com/users/mahak-bansal.1be1d00f" class="text-decoration-none text-center d-block py-4 border rounded" target="_blank">
+                    <i class="fas fa-award fa-4x mb-2"></i>
+                    <span class="d-block fs-5">Credly</span>
+                </a>
+            </div>
+
+            <!-- Phone Number -->
+            <div class="col">
+                <a href="tel:+91 8368403246" class="text-decoration-none text-center d-block py-4 border rounded">
+                    <i class="fas fa-phone-alt fa-4x mb-2"></i>
+                    <span class="d-block fs-5">Phone Number</span>
+                </a>
+            </div>
+            <!-- GitHub -->
+<div class="col">
+    <a href="https://github.com/mahakbansal2004" class="text-decoration-none text-center d-block py-4 border rounded" target="_blank">
+        <i class="fab fa-github fa-4x mb-2"></i>
+        <span class="d-block fs-5">GitHub</span>
+    </a>
+</div>
+
+
+            
+
+           <!-- Location -->
+<div class="col">
+    <a href="https://www.google.com/maps/place/Bahadurgarh,+Haryana" class="text-decoration-none text-center d-block py-4 border rounded" target="_blank">
+        <i class="fas fa-map-marker-alt fa-4x mb-2"></i>
+        <span class="d-block fs-5">Location</span>
+    </a>
+</div>
+
+        </div>
+    </div>
+</section>
+</div>
+
+
+    <!--cv section-->
+<section class="bg-light py-5">
+    <div class="container">
+        <h2 class="text-center mb-5" id="cv">CV</h2>
+
+        <!-- CV Options -->
+        <div class="row">
+            <!-- View CV -->
+            <div class="col-md-6">
+                <div class="card border-0 rounded shadow mb-4">
+                    <div class="card-body">
+                        <h3 class="card-title">View CV</h3>
+                        <p class="card-text">Click below to view the CV.</p>
+                        <a href="static/Mahak bansal CV.pdf" class="btn btn-primary btn-sm" target="_blank">View CV</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Download CV -->
+            <div class="col-md-6">
+                <div class="card border-0 rounded shadow mb-4">
+                    <div class="card-body">
+                        <h3 class="card-title">Download CV</h3>
+                        <p class="card-text">Right-click on the link below and select "Save link as..." to download the CV.</p>
+                        <a href="static/Mahak bansal CV.pdf" class="btn btn-primary btn-sm">Download CV</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<button id="backToTopBtn" title="Go to top">Back to top</button>
+
+    <!-- Contact Section -->
+    <section class="bg-dark text-white py-5">
+        <div class="container">
+            <h2 class="text-center mb-5" id="contact">Contact Me</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="text-center">Insert your contact details here.</p>
+                </div>
+                <div class="col-md-6">
+                    {% comment %} <form>
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Name">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control" placeholder="Email">
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control" rows="5" placeholder="Message"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">Submit</button><br><br>
+                    </form> {% endcomment %}
+                    <form class="row g-3 justify-content-md-center" method="post" action="/">
+                        {% csrf_token %}
+                      <div class="col-12">
+                        <label for="inputName" class="form-label">Name</label>
+                        <input type="text" class="form-control" id="inputName" name="name" placeholder="Your Name" required>
+                      </div>
+                      <div class="col-12">
+                        <label for="inputPhone" class="form-label">Phone no.</label>
+                        <input type="tel" class="form-control" id="inputPhone" name="phone" placeholder="Your Phone no." required>
+                      </div>
+                      <div class="col-12">
+                        <label for="inputEmail" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="inputEmail" name="email" placeholder="Your Email" required>
+                      </div>
+                      <div class="col-12">
+                        <label for="inputDescription" class="form-label">Description</label>
+                        <textarea class="form-control" id="inputDescription" name="desc" placeholder="Enter a brief description" required></textarea>
+                      </div>
+                      <div class="col-12">
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                      </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-3">
+        <div class="container text-center">
+            <p>Copyright &copy; 2024 Mahak Bansal - All Rights Reserved</p>
+        </div>
+    </footer>
+
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var sidenav = document.querySelectorAll('.sidenav');
+            M.Sidenav.init(sidenav);
+        
+            var scrollspies = document.querySelectorAll('.scrollspy');
+            M.ScrollSpy.init(scrollspies, {
+                scrollOffset: 50
+            });
+        });
+        
+        
+        // Get the button
+        const backToTopBtn = document.getElementById("backToTopBtn");
+        
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function() {scrollFunction()};
+        
+        function scrollFunction() {
+          if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            backToTopBtn.style.display = "block";
+          } else {
+            backToTopBtn.style.display = "none";
+          }
+        }
+        
+        // When the user clicks on the button, scroll to the top of the document
+        backToTopBtn.addEventListener("click", () => {
+          document.body.scrollTop = 0; // For Safari
+          document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        });
+        
+    </script>
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
